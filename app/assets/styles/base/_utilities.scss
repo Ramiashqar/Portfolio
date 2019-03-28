@@ -1,12 +1,5 @@
 // utilities as a small toolbox sass file for quick fixes
 
-.u-container {
-  width: 97%;
-  margin: 0 auto;
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: $color-gray 0 0 2rem;
-}
 .u-center-text {
   text-align: center !important;
 }
@@ -36,12 +29,12 @@
   }
 }
 .u-margin-top-tiny {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   @include respond(tab-port) {
-    margin-top: .2rem;
+    margin-top: 0.2rem;
   }
 }
-.u-padding-right-medium{
+.u-padding-right-medium {
   padding-right: 4rem;
 }
 
@@ -66,5 +59,12 @@
   font-family: $sourceCode-medium, Courier, monospace;
   font-size: 2rem;
   line-height: 2;
+  letter-spacing: 0.07rem;
+}
+.u-article-header {
+  font-family: "Germania One", cursive;
+  font-size: 3rem;
+  line-height: 1.5;
   letter-spacing: 0.1rem;
+  margin: 3rem 0 4rem 4rem;
 }

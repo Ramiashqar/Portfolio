@@ -1,0 +1,12 @@
+.button-link {
+     box-shadow: none;
+     transition: all .1s ease-out;
+  &:hover {
+    background-color: $color-resolutionBlue;
+    color: $color-white;
+     letter-spacing: 0;
+     padding: .2rem .8rem;
+    font-weight: 100;
+    box-shadow: $color-gray-light 0 1rem 1rem;
+  }
+}

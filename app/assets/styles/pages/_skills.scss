@@ -1,0 +1,12 @@
+.skills {
+  &__paragraph {
+    font-size: 1.8rem;
+    margin: 0 13rem 10rem 4rem;
+    &::first-line {
+      font-family: $sourceCode-bold;
+    }
+    &:first-letter {
+      font-size: 4rem;
+    }
+  }
+}
