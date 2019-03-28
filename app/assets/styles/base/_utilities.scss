@@ -4,7 +4,6 @@
   width: 97%;
   margin: 0 auto;
   border-radius: 1rem;
-  height: 100vh;
   padding: 2rem;
   box-shadow: $color-gray 0 0 2rem;
 }
@@ -45,8 +44,12 @@
 }
 
 .u-margin-top-big {
-  margin-top: 8rem;
+  margin-top: 12rem;
   @include respond(tab-port) {
-    margin-top: 4rem;
+    margin-top: 6rem;
   }
+}
+
+.u-color-change1{
+color: $color-resolutionBlue;
 }
