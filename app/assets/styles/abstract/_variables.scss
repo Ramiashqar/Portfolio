@@ -1,32 +1,14 @@
 //VARIABLES
 //COLORS
-:root {
-  --color-black: #111111;
-  --color-dark-gray: #333333;
-  --color-gray: #aaaaaa;
-  --color-silver: #dddddd;
-  --color-white: #ffffff;
-
-  --color-navy: #001f3f;
-  --color-blue: #0074d9;
-  --color-aqua: #7fdbff;
-  --color-teal: #39cccc;
-
-  --color-olive: #3d9970;
-  --color-green: #2ecc40;
-  --color-lime: #01ff70;
-
-  --color-yellow: #ffdc00;
-  --color-orange: #ff851b;
-
-  --color-red: #ff4136;
-  --color-maroon: #85144b;
-  --color-tamarillo: #8c1515;
-
-  --color-fuchsia: #f012be;
-  --color-purple: #b10dc9;
-  --color-french-rose: #ee3e80;
-}
+$color-black: #000000;
+$color-white: #ffffff;
+$color-resolutionBlue: #384575;
+$color-screaminGreen: #53fa7b;
+$color-magenta: #ec71b8;
+$color-anakiwa: #8be9fd;
+$color-gray: #848181;
+$color-gray-light: #cccccc;
+$color-mindaro: #ecf589;
 
 //GRID
 
@@ -36,3 +18,7 @@ $gutter-vertical-small: 4rem;
 $gutter-horizontal: 6rem;
 
 //FONTS
+$germaniaOne: GermaniaOne;
+$sourceCode-medium: SourceCodePro-medium;
+$sourceCode-black: SourceCodePro-Black;
+$sourceCode-bold: SourceCodePro-semiBold;

@@ -1,2 +1,1 @@
-Webpack Setup for production with heroku, express, locally [FINAL STAGE]...
-Version 1.1.2 (Babel 7)
+# Rami Ashqar Portfolio
