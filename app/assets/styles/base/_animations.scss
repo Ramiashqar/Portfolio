@@ -1,3 +1,12 @@
 //ANIMATIONS
-
-
+@keyframes colorPulse {
+  0% {
+    color: black;
+  }
+  50% {
+    color: $color-resolutionBlue;
+  }
+  100% {
+    color: black;
+  }
+}
