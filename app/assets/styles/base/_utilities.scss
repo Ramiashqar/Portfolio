@@ -35,6 +35,15 @@
     margin-top: 1rem;
   }
 }
+.u-margin-top-tiny {
+  margin-top: .5rem;
+  @include respond(tab-port) {
+    margin-top: .2rem;
+  }
+}
+.u-padding-right-medium{
+  padding-right: 4rem;
+}
 
 .u-margin-top-medium {
   margin-top: 4rem;
@@ -50,6 +59,12 @@
   }
 }
 
-.u-color-change1{
-color: $color-resolutionBlue;
+.u-color-change1 {
+  color: $color-resolutionBlue;
+}
+.u-paragraph {
+  font-family: $sourceCode-medium, Courier, monospace;
+  font-size: 2rem;
+  line-height: 2;
+  letter-spacing: 0.1rem;
 }

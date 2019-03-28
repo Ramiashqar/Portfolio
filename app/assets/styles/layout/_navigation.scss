@@ -5,21 +5,20 @@
   justify-content: space-between;
   padding: 1rem;
   border-bottom: 1px solid $color-gray-light;
-  position: fixed;
-  width: 90%;
   background-color: $color-white;
+  z-index: 1000;
   &__logo {
-     flex: 20% 1 1;
-     margin-left: 2rem;
+    flex: 20% 1 1;
+    margin-left: 2rem;
     & > a > img {
       height: 6rem;
     }
   }
   &__icons {
-       flex: 60% 1 1;
-     display: flex;
-     align-items: center;
-     justify-content: space-around;
+    flex: 60% 1 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     &--link {
       text-decoration: none;
       height: 3rem;
@@ -30,7 +29,7 @@
         &-caption {
           color: $color-resolutionBlue;
           font-size: 1.5rem;
-          font-family: $sourceCode-bold;
+          font-family: $sourceCode-bold, Courier, monospace;
           letter-spacing: 1px;
           text-shadow: $color-black 0 0 1.5rem;
           position: absolute;
@@ -50,14 +49,13 @@
         }
       }
     }
-
   }
   &__dark-mode {
-     flex: 20% 1 1;
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-     justify-content: center;
+    flex: 20% 1 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     & > img {
       height: 6rem;
     }

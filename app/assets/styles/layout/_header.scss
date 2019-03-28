@@ -1,42 +1,45 @@
 // HEADER
-.header{
-     display: flex;
-     flex-direction: row;
-     &__left{
-          flex: 60% 0 1;
-          &--code{
-               font-family: $sourceCode-medium;
-               font-size: 9rem;
-               margin-top: 5rem;
-               color: rgba($color-gray,.8);
-          }
-          &--head{
-               margin:3rem 0 3rem 2rem;
-               font-family: 'Germania One', cursive;
-               font-size: 3.7rem;
-               line-height: 1.5;
-               margin-left: 4rem;
-               letter-spacing: .7rem;
-          }
-          &--social{
-               &--icon{
-                    height: 5rem;
-                    width: 5rem;
-                    margin: 0 0 10rem 4rem;
-               }
-          }
-     }
-     &__right{
-          &--r-logo{
-               height: 33rem;
-               transform: rotate(37deg);
-               margin: 5rem 20rem 0 0;
-          }
-     }
+.header {
+  display: flex;
+  flex-direction: row;
+  &__left {
+    flex: 55% 0 1;
+    &--code {
+      font-family: $sourceCode-medium, Courier, monospace;
+      font-size: 9rem;
+      margin-top: 5rem;
+      color: rgba($color-gray, 0.8);
+    }
+    &--head {
+      margin: 3rem 0 3rem 2rem;
+      font-family: "Germania One", cursive;
+      font-size: 3.7rem;
+      line-height: 1.5;
+      margin-left: 4rem;
+      letter-spacing: 0.7rem;
+    }
+    &--social {
+      &--icon {
+        height: 5rem;
+        width: 5rem;
+        margin: 0 0 10rem 4rem;
+      }
+    }
+  }
+  &__right {
+    &--r-logo {
+      height: 33rem;
+      transform: rotate(37deg);
+      padding-right: 4rem;
+      margin-top: 7rem;
+      backface-visibility: hidden;
+      overflow: hidden;
+    }
+  }
 }
-.down-error{
-     display: block;
-     margin: 0 auto;
-     height: 2rem;
-     margin-bottom: 1rem;
+.down-error {
+  display: block;
+  margin: 0 auto;
+  height: 2rem;
+  margin-bottom: 1rem;
 }
