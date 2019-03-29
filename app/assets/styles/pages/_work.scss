@@ -1,3 +1,4 @@
+//MY WORK
 .projects {
      margin: 4rem 0;
   &__all {
@@ -30,9 +31,6 @@
         }
       }
       &--view {
-     //    position: absolute;
-     //    top: 20%;
-     //    left: 30%;
      @include absCenter;
         background-color: $color-resolutionBlue;
         height: 10rem;
@@ -44,7 +42,7 @@
         visibility: hidden;
         &-para {
           padding: 3.5rem 2.6rem;
-          font-family: "Germania One", cursive !important;
+          font-family: "Germania One", cursive;
           letter-spacing: 0.3rem;
           text-shadow: $color-gray 0 0 4rem;
         }

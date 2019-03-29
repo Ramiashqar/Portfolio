@@ -1,3 +1,100 @@
 // FOOTER
+.footer {
+  padding-top: 10rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 60%;
+    background-color: $color-resolutionBlue;
+    color: $color-white;
+    border-radius: 2rem;
+    padding: 3rem;
+    position: relative;
+    font-family: "Germania One", cursive;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+    &--line {
+      position: absolute;
+      top: 15%;
+      content: "";
+      padding: 0.15rem;
+      width: 33%;
+      background-color: $color-white;
+      display: inline-block;
+      &-1 {
+        left: 9%;
+      }
+      &-2 {
+        left: 58%;
+      }
+    }
+    &--header {
+      position: absolute;
+      top: 15%;
+      left: 44%;
+      transform: translateY(-50%) rotate(0);
+      font-size: 2rem;
+      letter-spacing: 0.1rem;
+      display: inline-block;
+      transition: transform 1.5s ease;
+      &:hover{
+           transform: translateY(-50%) rotate(360deg);
+      }
+    }
+    &--para {
+      margin-top: 10rem;
+      text-align: center;
+      font-family: inherit;
 
-
+      margin-bottom: 2rem;
+    }
+    &--resume {
+      margin: 0 auto;
+      margin-bottom: 3rem;
+      transform: scale(1);
+      transition: transform 0.3s ease-out;
+      &--icon {
+        height: 6rem;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    &--social {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      &--icon {
+        transform: scale(1);
+        transition: transform 0.3s ease-out;
+        height: 4rem;
+        margin-right: 2rem;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+    &--sketch {
+      width: 50%;
+      text-align: center;
+      margin: 0 auto;
+      transform: skew(0) scale(1);
+      transition: transform 0.3s ease-out;
+      &:hover {
+        transform: skew(10deg) scale(1.1);
+        text-decoration: underline;
+      }
+    }
+    &--copy {
+      text-align: center;
+      margin-top: 3rem;
+      text-shadow: none;
+      transition: text-shadow 0.3s ease-out;
+      &:hover {
+        text-shadow: $color-gray 0 0 2rem;
+      }
+    }
+  }
+}
