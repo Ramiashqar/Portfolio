@@ -1,0 +1,67 @@
+.projects {
+     margin: 4rem 0;
+  &__all {
+    margin-left: 4rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    &--box {
+      position: relative;
+      flex: 22% 0 0;
+      line-height: 1.5;
+      border: 1px solid $color-gray;
+      margin: 4rem 1rem 1rem 4rem;
+      box-shadow: $color-gray 1rem 1rem 0.5rem;
+      transform: scale(1);
+      transition: transform 0.3s ease-out;
+      &--image {
+        height: 30rem;
+        width: 28rem;
+      }
+      &--description {
+        padding: 0.5rem;
+        &--paragraph {
+          margin-top: 1rem;
+          font-family: $sourceCode-medium, Courier, monospace;
+          font-size: 1.4rem;
+          width: 27rem;
+          margin-bottom: 1rem;
+        }
+      }
+      &--view {
+     //    position: absolute;
+     //    top: 20%;
+     //    left: 30%;
+     @include absCenter;
+        background-color: $color-resolutionBlue;
+        height: 10rem;
+        width: 10rem;
+        font-size: 2rem;
+        border-radius: 50%;
+        color: $color-white;
+        border: 0.3rem solid $color-white;
+        visibility: hidden;
+        &-para {
+          padding: 3.5rem 2.6rem;
+          font-family: "Germania One", cursive !important;
+          letter-spacing: 0.3rem;
+          text-shadow: $color-gray 0 0 4rem;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+      &:hover &--image {
+        filter: blur(3px) brightness(50%);
+      }
+      &:hover &--description {
+          filter: blur(3px) brightness(50%);
+        }
+      &:hover &--view {
+        visibility: visible;
+      }
+    }
+  }
+}
