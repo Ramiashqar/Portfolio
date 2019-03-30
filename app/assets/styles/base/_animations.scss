@@ -10,3 +10,14 @@
     color: black;
   }
 }
+@keyframes colorPulseDark {
+  0% {
+    color: $color-mindaro;
+  }
+  50% {
+    color: $color-magenta;
+  }
+  100% {
+    color: $color-mindaro;
+  }
+}

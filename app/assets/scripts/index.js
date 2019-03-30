@@ -2,6 +2,7 @@
 require("../styles/app.scss");
 require("../../index.html");
 require('./styles');
+require('./dark')
 
 //TODO:
 

@@ -41,6 +41,8 @@ body {
   font-family: sans-serif;
   box-sizing: border-box;
   color: $color-black;
+  background-color: $color-white;
+  transition: background-color .3s ease-in;
 }
 img {
   max-width: 100%;

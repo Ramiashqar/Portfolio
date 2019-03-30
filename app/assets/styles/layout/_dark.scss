@@ -1,0 +1,65 @@
+.dark {
+  background-color: $color-darkJungleGreen;
+  .header {
+    &__left {
+      &--code {
+        color: $color-anakiwa;
+      }
+      &--head {
+        color: $color-mindaro;
+      }
+    }
+  }
+  .article {
+    &__description {
+      &--paragraph {
+        color: $color-mindaro;
+      }
+    }
+  }
+  .skills {
+    &__paragraph {
+      color: $color-mindaro;
+    }
+  }
+  .projects {
+    &__all {
+      &--box {
+        color: $color-mindaro;
+        box-shadow: none;
+        border: 1px solid $color-magenta;
+        &--view{
+          background-color: $color-darkJungleGreen;
+          color: $color-mindaro;
+          border: 0.3rem solid $color-darkJungleGreen;
+        }
+      }
+    }
+  }
+  .navigation {
+    &__icons {
+      &--link {
+        &--figure {
+          &:hover &-image {
+               filter: blur(3px) brightness(200%);
+             }
+          &-caption {
+               color: $color-mindaro;
+               text-shadow: $color-gray 0 0 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  .button-link {
+  &:hover {
+    background-color: $color-darkJungleGreen;
+    color: $color-magenta;
+    box-shadow: $color-gray 0 0 1rem;
+     letter-spacing: .1rem;
+     padding: .2rem .8rem;
+    font-weight: bold;
+  }
+}
+
+}

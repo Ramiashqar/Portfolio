@@ -69,6 +69,7 @@
   margin: 3rem 0 4rem 4rem;
 }
 
+
 .u-inline-me{
   display: inline;
   margin-right: 1rem;
@@ -76,4 +77,15 @@
 }
 .u-small-circle{
   height: 1rem;
+}
+.u-pointer{
+  cursor: pointer;
+}
+.dark{
+  .u-color-change1{
+    color: $color-screaminGreen;
+  }
+  .u-article-header{
+    color: $color-screaminGreen;
+  }
 }
