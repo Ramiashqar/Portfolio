@@ -15,5 +15,5 @@ require('./dark')
 
 //[DONE] travel site header after using prettier by removing the new line after h2
 //[2] add new page svg indicator to links
-//[]
+//[3] Compress PNG images
 //[]
