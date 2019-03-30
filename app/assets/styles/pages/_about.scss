@@ -9,23 +9,27 @@
     &--image {
       height: 20rem;
     }
-    &--background{
-     background-color: $color-resolutionBlue;
-     height: 16.5rem;
-     width: 16.5rem;
-     border-radius: 50%;
-     position: absolute;
-     top: 14%;
-     left: 7%;
-     z-index: -1;
+    &--background {
+      background-color: $color-resolutionBlue;
+      height: 16.5rem;
+      width: 16.5rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 14%;
+      left: 7%;
+      z-index: -1;
+    }
+    &:hover &--background {
+      animation: hueRotate 5s ease-in-out;
+      animation-iteration-count: infinite;
     }
   }
   &__description {
     &--paragraph {
-         text-align: center;
-         width: 70%;
-         margin: 0 auto;
-         margin-bottom: 7rem;
+      text-align: center;
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: 7rem;
     }
   }
 }

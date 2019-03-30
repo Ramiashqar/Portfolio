@@ -15,7 +15,7 @@
 <body class='dark'>
   <!--   -----                    NAVIGATION BAR                  --------- -->
 
-  <nav class="navigation">
+  <nav class="navigation" id="navigation">
     <div class="navigation__logo">
       <a href="index.html" title="Rami Ashqar">
         <img src="assets/images/R-LOGO-light.svg" alt="RAMI ASHQAR" class= "darkMe hideMe">
@@ -23,7 +23,7 @@
     </div>
     </a>
     <div class="navigation__icons">
-      <a href="#" class="navigation__icons--link">
+      <a href="#home" class="navigation__icons--link">
         <figure class="navigation__icons--link--figure">
           <img src="assets/images/ic_home-light.svg" class="navigation__icons--link--figure-image darkMe hideMe" alt="Home" />
           <img   src="assets/images/ic_home-dark.svg" class="navigation__icons--link--figure-image lightMe" alt="Home" />
@@ -31,7 +31,7 @@
         </figure>
 
       </a>
-      <a href="#" class="navigation__icons--link">
+      <a href="#aboutMe" class="navigation__icons--link">
         <figure class="navigation__icons--link--figure">
           <img  src="assets/images/ic_user-light.svg" class="navigation__icons--link--figure-image darkMe hideMe" alt="About me" />
           <img  src="assets/images/ic_user-dark.svg" class="navigation__icons--link--figure-image lightMe" alt="About me" />
@@ -39,7 +39,7 @@
         </figure>
 
       </a>
-      <a href="#" class="navigation__icons--link">
+      <a href="#skills" class="navigation__icons--link">
         <figure class="navigation__icons--link--figure">
           <img  src="assets/images/ic_setting-light.svg" class="navigation__icons--link--figure-image darkMe hideMe" alt="Skills" />
           <img  src="assets/images/ic_setting-dark.svg" class="navigation__icons--link--figure-image lightMe" alt="Skills" />
@@ -47,7 +47,7 @@
         </figure>
 
       </a>
-      <a href="#" class="navigation__icons--link">
+      <a href="#myWork" class="navigation__icons--link">
         <figure class="navigation__icons--link--figure">
           <img  src="assets/images/ic_work-light.svg" class="navigation__icons--link--figure-image darkMe hideMe" alt="My work" />
           <img src="assets/images/ic_work-dark.svg" class="navigation__icons--link--figure-image lightMe" alt="My work" />
@@ -55,7 +55,7 @@
         </figure>
 
       </a>
-      <a href="#" class="navigation__icons--link">
+      <a href="#contact" class="navigation__icons--link">
         <figure class="navigation__icons--link--figure">
           <img  src="assets/images/ic_mail-light.svg" class="navigation__icons--link--figure-image u-margin-top-tiny darkMe hideMe"
             alt="Contact Me" />
@@ -70,7 +70,7 @@
 
   <!--  -----                   HEADER                       ------------ -->
 
-  <header class="header u-margin-top-big">
+  <header class="header u-margin-top-big" id="home">
     <div class="header__left">
       <div class="header__left--code">&lt;&#47;&gt;</div>
       <h1 class="header__left--head">Hi, <br />I'm <span class="u-color-change1">R</span>ami, <br />Front End
@@ -104,7 +104,7 @@
 
   <!--  -----                          ABOUT ME                  ------ -->
 
-  <article class="article">
+  <article class="article" id="aboutMe">
     <div class="article__face">
       <div class="article__face--background"></div>
       <img src="assets/images/face.png" class="article__face--image" alt="My photo">
@@ -121,7 +121,7 @@
 
   <!-- --------                 SKILLS AND EXPERIENCE                 ---------- -->
 
-  <article class="skills">
+  <article class="skills" id="skills">
     <h2 class="u-article-header">
       Skills & <br />Experience
     </h2>
@@ -144,14 +144,14 @@
       <span class="animate-me-4">responsive web sites layouts</span>.<br />
       Visit my <a href="https://www.linkedin.com" target="_blank" class="button-link"><u>linkedin</u></a> profile for
       more
-      details, or see some of my work in <a href="https://github.com/Ramiashqar/" target="_blank"
-        class="button-link"><u>github</u></a>, or just simply visit the <a href="#" target="_blank"
+      details, or view some of my work in <a href="https://github.com/Ramiashqar/" target="_blank"
+        class="button-link"><u>github</u></a>, or just simply visit the <a href="#contact"
         class="button-link"><u>contact</u></a> section below.
     </p>
   </article>
 
   <!-- --------                MY WORK AND PROJECTS            -------- -->
-  <article class="projects">
+  <article class="projects" id="myWork">
     <h2 class="u-article-header">
       My Work & <br />Training Projects
     </h2>
@@ -163,7 +163,7 @@
             alt="yellow circle">
           <p class="projects__all--box--description--paragraph">Using new javaScript features such as: API, Promises,
             JS
-            modules, Async/Await and more new javaScript modern features. <strong>[No Mobile Version Yet]</strong>
+            modules and Async/Await. Using Webpack4 as the main bundler. <strong>[No Mobile Version Yet]</strong>
             (learned from @andrew_j_mead)</p>
         </div>
         <a href="https://ramiashqar.github.io/hangman/" target="_blank">
@@ -178,7 +178,7 @@
           <h2 class="u-inline-me">Trillo:</h2><img src="assets/images/Oval-css.svg" class="u-small-circle"
             alt="yellow circle">
           <p class="projects__all--box--description--paragraph">Using CSS Flexbox layout, and some great CSS features
-            such as: CSS-Variables, svg HTML tag, and sprites.
+            such as: CSS-Variables, svg-HTML tag, and sprites.
             (learned from @jonasschmedtman)</p>
         </div>
         <a href="https://ramiashqar.github.io/Trillo/" target="_blank">
@@ -222,7 +222,7 @@
   </article>
 
   <!-- --------                FOOTER                  -------- -->
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="footer__container">
       <span class="footer__container--line footer__container--line-1"></span>
       <h2 class="footer__container--header">Thanks !</h2><span

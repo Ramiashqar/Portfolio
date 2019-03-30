@@ -1,5 +1,21 @@
 .dark {
   background-color: $color-darkJungleGreen;
+  .navigation {
+    background-color: $color-darkJungleGreen;
+    &__icons {
+      &--link {
+        &--figure {
+          &:hover &-image {
+               filter: blur(3px) brightness(200%);
+             }
+          &-caption {
+               color: $color-mindaro;
+               text-shadow: $color-gray 0 0 1.5rem;
+          }
+        }
+      }
+    }
+  }
   .header {
     &__left {
       &--code {
@@ -36,21 +52,7 @@
       }
     }
   }
-  .navigation {
-    &__icons {
-      &--link {
-        &--figure {
-          &:hover &-image {
-               filter: blur(3px) brightness(200%);
-             }
-          &-caption {
-               color: $color-mindaro;
-               text-shadow: $color-gray 0 0 1.5rem;
-          }
-        }
-      }
-    }
-  }
+
   .button-link {
   &:hover {
     background-color: $color-darkJungleGreen;

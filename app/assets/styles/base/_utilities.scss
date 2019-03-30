@@ -54,6 +54,10 @@
 
 .u-color-change1 {
   color: $color-resolutionBlue;
+  &:hover{
+    animation: hueRotate 5s ease-in-out;
+    animation-iteration-count: infinite;
+  }
 }
 .u-paragraph {
   font-family: $sourceCode-medium, Courier, monospace;

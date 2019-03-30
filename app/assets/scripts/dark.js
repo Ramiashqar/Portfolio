@@ -1,3 +1,4 @@
+'strict mode'
 const darkEl = document.querySelectorAll('.darkMe')
 const lightEl = document.querySelectorAll('.lightMe')
 const bodyEl= document.getElementsByTagName('BODY')[0]
