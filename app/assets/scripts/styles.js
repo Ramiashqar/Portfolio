@@ -13,8 +13,7 @@ const navDestroy = new Waypoint({
     } else {
       navEl.classList.remove("navigation-destroy");
     }
-  },
-  offset: 17
+  }
 });
 navDestroy;
 // remove the down arrow

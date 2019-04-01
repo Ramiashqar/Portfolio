@@ -10,6 +10,7 @@
     border-radius: 2rem;
     box-shadow: $color-resolutionBlue 0 0 2rem;
     transition: all 0.7s ease-in-out;
+    backface-visibility: hidden;
     &::before,
     &::after {
       position: absolute;
@@ -20,6 +21,7 @@
       border-radius: 10rem;
       transform: rotate(0) translate(0);
       transition: all 0.7s ease-in-out;
+      backface-visibility: hidden;
     }
     &::before {
       top: 25%;
@@ -40,11 +42,13 @@
     }
   }
 }
-.dark .nav-icon{
-     background-color: $color-darkJungleGreen;
-     box-shadow: $color-gray 0 0 2rem;
-     &::before,
+.dark .nav-icon {
+  @include respond(phone) {
+    background-color: $color-darkJungleGreen;
+    box-shadow: $color-gray 0 0 2rem;
+    &::before,
     &::after {
       background-color: $color-gray-light;
     }
+  }
 }

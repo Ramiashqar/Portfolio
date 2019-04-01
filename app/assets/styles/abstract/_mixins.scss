@@ -12,7 +12,7 @@
 //Font to Roboto
 @mixin roboto {
   font-size: 1.6rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 200;
 }
 
@@ -46,7 +46,7 @@
 // 1em = 16px
 
 @mixin respond($breakpoint) {
-  @if $breakpoint==phone-small{
+  @if $breakpoint==phone-small {
     @media only screen and (max-width: 20em) {
       @content;
     }

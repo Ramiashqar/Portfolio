@@ -2,6 +2,7 @@
 require("../styles/app.scss");
 require("./noframework.waypoints");
 require("../../index.html");
+require("./navMark");
 require("./navigation");
 require("./styles");
 require("./dark");

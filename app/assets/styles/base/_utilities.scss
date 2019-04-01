@@ -24,15 +24,9 @@
     margin-top: 1rem;
   }
 }
-.u-margin-top-tiny {
-  margin-top: 0.5rem;
-  @include respond(tab-port) {
-    margin-top: 0.2rem;
-  }
-}
 .u-padding-right-medium {
   padding-right: 4rem;
-  @include respond(phone){
+  @include respond(phone) {
     padding-right: 0;
   }
 }
@@ -53,7 +47,7 @@
 
 .u-color-change1 {
   color: $color-resolutionBlue;
-  &:hover{
+  &:hover {
     animation: hueRotate 5s ease-in-out;
     animation-iteration-count: infinite;
   }
@@ -72,23 +66,22 @@
   margin: 3rem 0 4rem 4rem;
 }
 
-
-.u-inline-me{
+.u-inline-me {
   display: inline;
   margin-right: 1rem;
   text-decoration: underline;
 }
-.u-small-circle{
+.u-small-circle {
   height: 1rem;
 }
-.u-pointer{
+.u-pointer {
   cursor: pointer;
 }
-.dark{
-  .u-color-change1{
+.dark {
+  .u-color-change1 {
     color: $color-screaminGreen;
   }
-  .u-article-header{
+  .u-article-header {
     color: $color-screaminGreen;
   }
 }

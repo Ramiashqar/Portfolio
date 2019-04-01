@@ -19,6 +19,7 @@
 }
 
 html {
+  -ms-scroll-chaining: chained;
   scroll-behavior: smooth;
   //set 1 rem base value
   font-size: 62.5%; // 1rem= 10px; 10px/16px= 62.5%
@@ -43,7 +44,7 @@ body {
   box-sizing: border-box;
   color: $color-black;
   background-color: $color-white;
-  transition: background-color .3s ease-in;
+  transition: background-color 0.3s ease-in;
 }
 img {
   max-width: 100%;

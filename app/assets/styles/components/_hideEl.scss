@@ -1,14 +1,14 @@
-.hideMe{
-     visibility: hidden;
-     display: none;
+.hideMe {
+  visibility: hidden;
+  display: none;
 }
-.showMe{
-     visibility: visible !important;
+.showMe {
+  visibility: visible !important;
 }
-.hideMeOnPhone{
-     @include respond(phone){
-          opacity: 0;
-          visibility: hidden;
-          display: none; 
-     }
+.hideMeOnPhone {
+  @include respond(phone) {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
 }
