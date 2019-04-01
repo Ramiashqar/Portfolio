@@ -9,6 +9,13 @@
   }
 }
 
+//Font to Roboto
+@mixin roboto {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+}
+
 //absolute centering for block elements virtacally and horizontally
 @mixin absCenter {
   position: absolute;
@@ -17,26 +24,33 @@
   transform: translate(-50%, -50%);
 }
 
-// MEDIA QUIERY MANAGER
+// MEDIA QUERY MANAGER
 
-// 0 -600px:   phone
+// 0 - 320px:   Mobile Small
+// 320 - 600px:   Mobile
 // 600 - 900px:    Tablet Portrait
-// 900 - 1200px:   Tblet landscape
-// [1200px - 18000x] is where our normal style apply
+// 900 - 1200px:   Tablet Landscape
+// [1200 - 1800px] is where our normal style apply
 // 1800px ++:  BIG DESKTOP
 
 // $breakpoint argument choices:
 
+// -phone-small
 // -phone
 // -tab-port
 // -tab-land
 // -big-desk
 
-//ORDER base + typography > general layot + grid > page layout > component
+//ORDER base + typography > general layout + grid > page layout > component
 
 // 1em = 16px
 
 @mixin respond($breakpoint) {
+  @if $breakpoint==phone-small{
+    @media only screen and (max-width: 20em) {
+      @content;
+    }
+  }
   @if $breakpoint==phone {
     @media only screen and (max-width: 37.5em) {
       @content;

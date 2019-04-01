@@ -1,0 +1,50 @@
+.nav-icon {
+  @include respond(phone) {
+    position: fixed;
+    top: 3%;
+    right: 7%;
+    z-index: 1200;
+    background-color: $color-white;
+    width: 4rem;
+    height: 3rem;
+    border-radius: 2rem;
+    box-shadow: $color-resolutionBlue 0 0 2rem;
+    transition: all 0.7s ease-in-out;
+    &::before,
+    &::after {
+      position: absolute;
+      left: 20%;
+      content: "";
+      background-color: $color-resolutionBlue;
+      padding: 0.15rem 1.2rem;
+      border-radius: 10rem;
+      transform: rotate(0) translate(0);
+      transition: all 0.7s ease-in-out;
+    }
+    &::before {
+      top: 25%;
+    }
+    &::after {
+      top: 65%;
+    }
+  }
+}
+.clicked {
+  @include respond(phone) {
+    height: 4rem;
+    &::before {
+      transform: rotate(-50deg) translate(-0.5rem, 0.5rem);
+    }
+    &::after {
+      transform: rotate(50deg) translate(-0.6rem, -0.5rem);
+    }
+  }
+}
+.dark .nav-icon{
+     background-color: $color-darkJungleGreen;
+     box-shadow: $color-gray 0 0 2rem;
+     &::before,
+    &::after {
+      background-color: $color-gray-light;
+    }
+}

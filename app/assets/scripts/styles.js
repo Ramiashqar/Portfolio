@@ -1,8 +1,8 @@
 "strict mode";
-require("waypoints/lib/noframework.waypoints.min");
+require("./noframework.waypoints");
 const navEl = document.getElementById("navigation");
 const homeEl = document.getElementById("home");
-const arrowEl = document.querySelectorAll(".down-error");
+const arrowEl = document.querySelectorAll(".down-arrow");
 
 // add Nav destruction
 const navDestroy = new Waypoint({
@@ -13,8 +13,10 @@ const navDestroy = new Waypoint({
     } else {
       navEl.classList.remove("navigation-destroy");
     }
-  }
+  },
+  offset: 17
 });
+navDestroy;
 // remove the down arrow
 const arrowVanish = new Waypoint({
   element: homeEl,
@@ -30,3 +32,4 @@ const arrowVanish = new Waypoint({
     }
   }
 });
+arrowVanish;

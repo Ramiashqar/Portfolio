@@ -1,6 +1,8 @@
 // require("../styles/app.css");
 require("../styles/app.scss");
+require("./noframework.waypoints");
 require("../../index.html");
+require("./navigation");
 require("./styles");
 require("./dark");
 
@@ -10,6 +12,8 @@ require("./dark");
 //[DONE] Hide the down arrow when scrolling matching Apple design
 //[DONE] Hover Effects to: big logo and face image (filter)
 //[DONE] Add id's to sections and link the nav items and "contact" in skills too
+//[5] Add lazy loading for light images
+//[6] Mark active Section
 
 //FIXME:
 

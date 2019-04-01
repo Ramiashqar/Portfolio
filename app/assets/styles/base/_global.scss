@@ -19,6 +19,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   //set 1 rem base value
   font-size: 62.5%; // 1rem= 10px; 10px/16px= 62.5%
   @include respond(tab-land) {

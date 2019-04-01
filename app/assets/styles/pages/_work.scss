@@ -1,12 +1,19 @@
 //MY WORK
 .projects {
-     margin: 4rem 0;
+  margin: 4rem 0;
+  @include respond(tab-port) {
+    margin: 2rem 0;
+  }
+
   &__all {
     margin-left: 4rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
+    @include respond(tab-port) {
+      margin-left: 0;
+    }
     &--box {
       position: relative;
       flex: 22% 0 0;
@@ -16,9 +23,16 @@
       box-shadow: $color-gray 1rem 1rem 0.5rem;
       transform: scale(1);
       transition: transform 0.3s ease-out;
+      @include respond(tab-port) {
+        margin: 4rem 1rem 1rem 1rem;
+      }
       &--image {
         height: 30rem;
         width: 28rem;
+        @include respond(phone) {
+          height: 23rem;
+          width: 21rem;
+        }
       }
       &--description {
         padding: 0.5rem;
@@ -28,10 +42,14 @@
           font-size: 1.4rem;
           width: 27rem;
           margin-bottom: 1rem;
+          @include respond(phone) {
+            width: 20rem;
+            font-size: 1.2rem;
+          }
         }
       }
       &--view {
-     @include absCenter;
+        @include absCenter;
         background-color: $color-resolutionBlue;
         height: 10rem;
         width: 10rem;
@@ -55,8 +73,8 @@
         filter: blur(3px) brightness(50%);
       }
       &:hover &--description {
-          filter: blur(3px) brightness(50%);
-        }
+        filter: blur(3px) brightness(50%);
+      }
       &:hover &--view {
         visibility: visible;
       }

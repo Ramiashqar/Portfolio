@@ -1,6 +1,9 @@
 // FOOTER
 .footer {
   padding-top: 10rem;
+  @include respond(tab-port){
+    padding-top: 4rem;
+  }
   &__container {
     display: flex;
     flex-direction: column;
@@ -15,6 +18,12 @@
     font-size: 1.6rem;
     line-height: 1.5;
     letter-spacing: 0.1rem;
+    @include respond(tab-port){
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 0;
+    padding: .5rem;
+    }
     &--line {
       position: absolute;
       top: 15%;
@@ -23,6 +32,9 @@
       width: 33%;
       background-color: $color-white;
       display: inline-block;
+      @include respond(phone){
+        display: none;
+      }
       &-1 {
         left: 9%;
       }
@@ -39,6 +51,12 @@
       letter-spacing: 0.1rem;
       display: inline-block;
       transition: transform 1.5s ease;
+      @include respond(phone){
+        position: initial;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 5rem;
+      }
       &:hover{
            transform: translateY(-50%) rotate(360deg);
       }
@@ -47,8 +65,10 @@
       margin-top: 10rem;
       text-align: center;
       font-family: inherit;
-
       margin-bottom: 2rem;
+      @include respond(phone){
+        margin-top: 3rem;
+      }
     }
     &--resume {
       margin: 0 auto;
@@ -85,6 +105,10 @@
       &:hover {
         transform: skew(10deg) scale(1.1);
         text-decoration: underline;
+      }
+      @include respond(phone){
+        width: 100%;
+        margin: 0;
       }
     }
     &--copy {

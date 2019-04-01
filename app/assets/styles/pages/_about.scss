@@ -3,11 +3,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include respond(tab-port) {
+    margin-top: 0;
+  }
   &__face {
     position: relative;
     margin: 7rem 0;
+    @include respond(tab-port) {
+      margin: 0 0 2rem 0;
+    }
     &--image {
       height: 20rem;
+      @include respond(phone) {
+        height: 15rem;
+      }
     }
     &--background {
       background-color: $color-resolutionBlue;
@@ -18,6 +27,14 @@
       top: 14%;
       left: 7%;
       z-index: -1;
+      @include respond(phone) {
+        height: 11.5rem;
+        width: 11.5rem;
+        top: 20%;
+        left: 10%;
+        animation: hueRotate 5s ease-in-out;
+        animation-iteration-count: infinite;
+      }
     }
     &:hover &--background {
       animation: hueRotate 5s ease-in-out;
@@ -30,6 +47,12 @@
       width: 70%;
       margin: 0 auto;
       margin-bottom: 7rem;
+      @include respond(tab-port) {
+        width: 90%;
+      }
+      @include respond(phone) {
+        @include roboto;
+      }
     }
   }
 }

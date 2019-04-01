@@ -2,13 +2,23 @@
 .header {
   display: flex;
   flex-direction: row;
+  position: relative;
+
   &__left {
     flex: 55% 0 1;
+    @include respond(tab-port) {
+      flex: 100% 1 1;
+    }
     &--code {
       font-family: $sourceCode-medium, Courier, monospace;
       font-size: 9rem;
       margin-top: 5rem;
       color: rgba($color-gray, 0.8);
+      @include respond(tab-port) {
+        text-align: center;
+        animation: hueRotate 5s ease-in-out;
+        animation-iteration-count: infinite;
+      }
     }
     &--head {
       margin: 3rem 0 3rem 2rem;
@@ -17,8 +27,15 @@
       line-height: 1.5;
       margin-left: 4rem;
       letter-spacing: 0.7rem;
+      @include respond(tab-port) {
+        text-align: center;
+      }
     }
     &--social {
+      @include respond(tab-port) {
+        text-align: center;
+      }
+
       &--icon {
         height: 5rem;
         width: 5rem;
@@ -27,6 +44,13 @@
         transition: transform 0.3s ease-out;
         &:hover {
           transform: scale(1.2);
+        }
+        @include respond(tab-land) {
+          height: 4rem;
+          width: 4rem;
+        }
+        @include respond(phone) {
+          margin: 0 0 4rem 1rem;
         }
       }
     }
@@ -40,21 +64,27 @@
       margin-top: 7rem;
       backface-visibility: hidden;
       overflow: hidden;
-      &:hover{
+      @include respond(tab-port) {
+        display: none;
+      }
+      &:hover {
         animation: hueRotate 5s ease-in-out;
         animation-iteration-count: infinite;
       }
     }
   }
 }
-.down-error {
+.down-arrow {
   display: block;
   margin: 0 auto;
   height: 2rem;
   margin-bottom: 1rem;
   opacity: 1;
-  transition: opacity .5s ease-in;
+  transition: opacity 0.5s ease-in;
+  @include respond(tab-port) {
+    display: none;
+  }
 }
-.vanish{
-  opacity: 0;
+.vanish {
+  opacity: 0 !important;
 }
