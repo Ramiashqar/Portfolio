@@ -23,4 +23,4 @@ require("./dark");
 //[NO NEED] Make the effect of link and hover the same
 //[DONE] Fix the selection colors for both modes
 //[DONE REPLACED BY SCROLLMAGIC] No waypoints in the final version
-//[safari no favicon]
+//[DONE] Safari no favicon
