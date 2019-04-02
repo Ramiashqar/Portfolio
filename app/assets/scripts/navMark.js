@@ -1,48 +1,66 @@
-"strict mode";
-require("./noframework.waypoints");
-const homeEl = document.getElementById("home");
-const aboutEl = document.getElementById("aboutMe");
-const skillsEl = document.getElementById("skills");
-const workEl = document.getElementById("myWork");
-const contactEl = document.getElementById("contact");
+// "strict mode";
+import ScrollMagic from "scrollmagic";
 const navFigure = document.querySelectorAll(".navigation__icons--link--figure");
-
-const markHome = new Waypoint({
-  element: homeEl,
-  handler: () => {
-    navFigure[0].classList.toggle("active");
-  },
-  offset: "10%"
+//Scroll Magic Initiate Controller
+const controller = new ScrollMagic.Controller();
+//Home
+const homeShow = new ScrollMagic.Scene({
+  triggerElement: "#home",
+  offset: 150
 });
-const markAbout = new Waypoint({
-  element: aboutEl,
-  handler: () => {
-    navFigure[0].classList.toggle("active");
-    navFigure[1].classList.toggle("active");
-  },
-  offset: "10%"
+homeShow.setClassToggle(navFigure[0], "active");
+//About Me
+const aboutShow = new ScrollMagic.Scene({
+  triggerElement: "#aboutMe",
+  offset: 80
 });
-const markSkills = new Waypoint({
-  element: skillsEl,
-  handler: () => {
-    navFigure[1].classList.toggle("active");
-    navFigure[2].classList.toggle("active");
-  },
-  offset: "10%"
+const homeHide = new ScrollMagic.Scene({
+  triggerElement: "#aboutMe",
+  offset: 80
 });
-const markWork = new Waypoint({
-  element: workEl,
-  handler: () => {
-    navFigure[2].classList.toggle("active");
-    navFigure[3].classList.toggle("active");
-  },
-  offset: "10%"
+aboutShow.setClassToggle(navFigure[1], "active");
+homeHide.setClassToggle(navFigure[0], "sleep");
+// Skills
+const skillsShow = new ScrollMagic.Scene({
+  triggerElement: "#skills",
+  offset: 80
 });
-const markContact = new Waypoint({
-  element: contactEl,
-  handler: () => {
-    navFigure[3].classList.toggle("active");
-    navFigure[4].classList.toggle("active");
-  },
-  offset: "30%"
+const aboutHide = new ScrollMagic.Scene({
+  triggerElement: "#skills",
+  offset: 80
 });
+skillsShow.setClassToggle(navFigure[2], "active");
+aboutHide.setClassToggle(navFigure[1], "sleep");
+//My Work
+const workShow = new ScrollMagic.Scene({
+  triggerElement: "#myWork",
+  offset: 80
+});
+const skillsHide = new ScrollMagic.Scene({
+  triggerElement: "#myWork",
+  offset: 80
+});
+workShow.setClassToggle(navFigure[3], "active");
+skillsHide.setClassToggle(navFigure[2], "sleep");
+//Contact
+const contactShow = new ScrollMagic.Scene({
+  triggerElement: "#contact",
+  offset: 80
+});
+const workHide = new ScrollMagic.Scene({
+  triggerElement: "#contact",
+  offset: 80
+});
+contactShow.setClassToggle(navFigure[4], "active");
+workHide.setClassToggle(navFigure[3], "sleep");
+controller.addScene([
+  homeShow,
+  aboutShow,
+  homeHide,
+  skillsShow,
+  aboutHide,
+  workShow,
+  skillsHide,
+  contactShow,
+  workHide
+]);

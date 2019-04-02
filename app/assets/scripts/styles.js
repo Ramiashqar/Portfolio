@@ -1,34 +1,26 @@
 "strict mode";
-require("./noframework.waypoints");
+import ScrollMagic from 'scrollmagic';
 const navEl = document.getElementById("navigation");
-const homeEl = document.getElementById("home");
 const arrowEl = document.querySelectorAll(".down-arrow");
+const navigationDestruction = document.querySelector('.navigation-destroy');
+const vanish= document.querySelector('.vanish');
 
-// add Nav destruction
-const navDestroy = new Waypoint({
-  element: navEl,
-  handler: direction => {
-    if (direction === "down") {
-      navEl.classList.add("navigation-destroy");
-    } else {
-      navEl.classList.remove("navigation-destroy");
-    }
-  }
-});
-navDestroy;
-// remove the down arrow
-const arrowVanish = new Waypoint({
-  element: homeEl,
-  handler: direction => {
-    if (direction === "down") {
-      arrowEl.forEach(el => {
-        el.classList.add("vanish");
-      });
-    } else {
-      arrowEl.forEach(el => {
-        el.classList.remove("vanish");
-      });
-    }
-  }
-});
-arrowVanish;
+// Init ScrollMagic Controller
+const controller = new ScrollMagic.Controller();
+
+//Nav Destroy
+const scene1 = new ScrollMagic.Scene({
+  triggerElement: '#home',
+  offset: 150
+})
+//Arrow Vanish
+const scene2 = new ScrollMagic.Scene({
+  triggerElement: '#home',
+  offset: 400
+})
+scene1.setClassToggle(navEl, "navigation-destroy")
+scene2.setClassToggle(arrowEl, "vanish")
+controller.addScene([
+  scene1,
+  scene2
+]);

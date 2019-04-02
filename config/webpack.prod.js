@@ -134,7 +134,7 @@ module.exports = env => {
         ]),
         minimize: true,
         purifyOptions: {
-          whitelist: []
+          whitelist: ['vanish', 'navigation-destroy', 'sleep', 'active']
         }
       }),
       new optimizeCSSAssetsPlugin({
