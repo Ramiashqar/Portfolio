@@ -20,7 +20,7 @@ const path = require("path"),
 module.exports = env => {
   return {
     entry: {
-      main: ["./app/assets/scripts/index.js"],
+      main: ["./app/assets/scripts/index.js"]
       // sub: ["./app/assets/scripts/sub-index.js"]
     },
     mode: "production",
@@ -73,13 +73,15 @@ module.exports = env => {
         },
         {
           test: /\.(ttf|otf)(\?v=\d+\.\d+\.\d+)?$/,
-          use: [{
-              loader: 'file-loader',
+          use: [
+            {
+              loader: "file-loader",
               options: {
                 name: "assets/fonts/[name].[ext]"
               }
-          }]
-      },
+            }
+          ]
+        },
         {
           test: /\.html$/,
           use: [
@@ -134,7 +136,13 @@ module.exports = env => {
         ]),
         minimize: true,
         purifyOptions: {
-          whitelist: ['vanish', 'navigation-destroy', 'sleep', 'active']
+          whitelist: [
+            "vanish",
+            "navigation-destroy",
+            "sleep",
+            "active",
+            "clicked"
+          ]
         }
       }),
       new optimizeCSSAssetsPlugin({

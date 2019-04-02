@@ -24,3 +24,4 @@ require("./dark");
 //[DONE] Fix the selection colors for both modes
 //[DONE REPLACED BY SCROLLMAGIC] No waypoints in the final version
 //[DONE] Safari no favicon
+//[9] fix nav class for mobile
