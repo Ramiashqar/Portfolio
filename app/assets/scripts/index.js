@@ -5,6 +5,7 @@ require("./navMark");
 require("./navigation");
 require("./styles");
 require("./dark");
+require("./smoothScroll")
 
 //TODO:
 
@@ -24,4 +25,6 @@ require("./dark");
 //[DONE] Fix the selection colors for both modes
 //[DONE REPLACED BY SCROLLMAGIC] No waypoints in the final version
 //[DONE] Safari no favicon
-//[9] fix nav class for mobile
+//[DONE] Fix nav class for mobile
+//[DONE] On firefox the first line pseudo is not coloring in dark mode also nav captions in both modes
+//[DONE] Smooth Anchor Scrolling

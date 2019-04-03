@@ -10,7 +10,6 @@
       @include roboto;
     }
     &::first-line {
-      font-family: $sourceCode-bold;
       @include respond(phone) {
         font-family: "Roboto", sans-serif;
       }
