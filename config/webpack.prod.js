@@ -13,8 +13,8 @@ const path = require("path"),
   imageminGifsicle = require("imagemin-gifsicle"),
   imageminSvgo = require("imagemin-svgo"),
   FaviconsWebpackPlugin = require("favicons-webpack-plugin"),
-  // compressionPlugin = require("compression-webpack-plugin"),
-  // brotliPlugin = require("brotli-webpack-plugin"),
+  compressionPlugin = require("compression-webpack-plugin"),
+  brotliPlugin = require("brotli-webpack-plugin"),
   CleanWebpackPlugin = require("clean-webpack-plugin"),
   DelWebpackPlugin = require("del-webpack-plugin"),
   CnameWebpackPlugin = require('cname-webpack-plugin');
@@ -103,13 +103,13 @@ module.exports = env => {
               options: {
                 name: "assets/images/[name].[ext]"
               }
+            },
+            {
+              loader: "tinify-loader",
+              options: {
+                apikey: "hrKVx6xdXBbTmVcPqgV9VqQh9JGxCXxZ"
+              }
             }
-            // {
-            //   loader: "tinify-loader",
-            //   options: {
-            //     apikey: "hrKVx6xdXBbTmVcPqgV9VqQh9JGxCXxZ"
-            //   }
-            // }
           ]
         },
         {
@@ -176,10 +176,10 @@ module.exports = env => {
         title: "Webpack Setup"
       }),
       new minifyPlugin(),
-      // new compressionPlugin({
-      //   algorithm: "gzip"
-      // }),
-      // new brotliPlugin(),
+      new compressionPlugin({
+        algorithm: "gzip"
+      }),
+      new brotliPlugin(),
       new FaviconsWebpackPlugin({
         logo: "./app/assets/images/favicon.png",
         prefix: "favicon-[hash]/",
