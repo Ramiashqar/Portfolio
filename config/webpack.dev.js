@@ -92,6 +92,17 @@ module.exports = {
         ]
       },
       {
+        test: /\.htaccess$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name]"
+            }
+          }
+        ]
+      },
+      {
         test: /\.(ttf|otf)(\?v=\d+\.\d+\.\d+)?$/,
         use: [{
             loader: 'file-loader',

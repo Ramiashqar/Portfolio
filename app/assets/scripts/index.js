@@ -6,7 +6,8 @@ require("./navMark");
 require("./navigation");
 require("./styles");
 require("./dark");
-require("./smoothScroll")
+require("./smoothScroll");
+require("./bugFix");
 
 //TODO:
 
@@ -16,6 +17,8 @@ require("./smoothScroll")
 //[DONE] Add id's to sections and link the nav items and "contact" in skills too
 //[NO NEED] Add lazy loading for light images
 //[DONE] Mark active Section
+//[DONE] Add the portfolio to my work
+//[DONE] Detect IE and Cancel support completely
 
 //FIXME:
 

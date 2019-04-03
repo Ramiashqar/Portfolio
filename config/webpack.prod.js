@@ -153,7 +153,10 @@ module.exports = env => {
             "navigation-destroy",
             "sleep",
             "active",
-            "clicked"
+            "clicked",
+            "IEisUsed",
+            "browser",
+            "browser-image"
           ]
         }
       }),

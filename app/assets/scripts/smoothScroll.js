@@ -1,5 +1,5 @@
-require('./smooth-scroll.polyfills');
+require("./smooth-scroll.polyfills");
 
-const scroll = new SmoothScroll('a[href*="#"]',{
-     easing: 'easeOutCubic'
-})
+const scroll = new SmoothScroll('a[href*="#"]', {
+  easing: "easeOutCubic"
+});
