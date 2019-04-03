@@ -13,11 +13,11 @@ const path = require("path"),
   imageminGifsicle = require("imagemin-gifsicle"),
   imageminSvgo = require("imagemin-svgo"),
   FaviconsWebpackPlugin = require("favicons-webpack-plugin"),
-  compressionPlugin = require("compression-webpack-plugin"),
-  brotliPlugin = require("brotli-webpack-plugin"),
+  // compressionPlugin = require("compression-webpack-plugin"),
+  // brotliPlugin = require("brotli-webpack-plugin"),
   CleanWebpackPlugin = require("clean-webpack-plugin"),
   DelWebpackPlugin = require("del-webpack-plugin"),
-  CnameWebpackPlugin = require('cname-webpack-plugin');
+  CnameWebpackPlugin = require("cname-webpack-plugin");
 module.exports = env => {
   return {
     entry: {
@@ -96,6 +96,17 @@ module.exports = env => {
           ]
         },
         {
+          test: /\.htaccess$/,
+          use: [
+            {
+              loader: "file-loader",
+              options: {
+                name: "[name]"
+              }
+            }
+          ]
+        },
+        {
           test: /\.(png|jpg|jpeg)$/,
           use: [
             {
@@ -103,13 +114,13 @@ module.exports = env => {
               options: {
                 name: "assets/images/[name].[ext]"
               }
-            },
-            {
-              loader: "tinify-loader",
-              options: {
-                apikey: "hrKVx6xdXBbTmVcPqgV9VqQh9JGxCXxZ"
-              }
             }
+            // {
+            //   loader: "tinify-loader",
+            //   options: {
+            //     apikey: "hrKVx6xdXBbTmVcPqgV9VqQh9JGxCXxZ"
+            //   }
+            // }
           ]
         },
         {
@@ -176,10 +187,10 @@ module.exports = env => {
         title: "Webpack Setup"
       }),
       new minifyPlugin(),
-      new compressionPlugin({
-        algorithm: "gzip"
-      }),
-      new brotliPlugin(),
+      // new compressionPlugin({
+      //   algorithm: "gzip"
+      // }),
+      // new brotliPlugin(),
       new FaviconsWebpackPlugin({
         logo: "./app/assets/images/favicon.png",
         prefix: "favicon-[hash]/",
@@ -218,13 +229,13 @@ module.exports = env => {
       }),
       new DelWebpackPlugin({
         //here I'm using it just to show all the built files in a much readable matter
-        include: ["dist/trash"],
+        include: ["docs/trash"],
         info: true,
         keepGeneratedAssets: true,
         allowExternal: true
       }),
       new CnameWebpackPlugin({
-        domain: 'ramiashqar.tk',
+        domain: "ramiashqar.tk"
       })
     ]
   };
