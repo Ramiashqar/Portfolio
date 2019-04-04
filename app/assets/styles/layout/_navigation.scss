@@ -1,5 +1,6 @@
 // NAVIGATION
 .navigation {
+  display: block;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -90,6 +91,7 @@
   }
   &__dark-mode {
     flex: 20% 1 1;
+    display: block;
     display: flex;
     flex-direction: row;
     align-items: center;

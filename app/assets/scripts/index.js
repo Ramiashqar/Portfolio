@@ -1,13 +1,14 @@
 // require("../styles/app.css");
 require("../styles/app.scss");
 require("../../index.html");
+require("./bugFix");
 require("../.htaccess");
 require("./navMark");
 require("./navigation");
 require("./styles");
 require("./dark");
 require("./smoothScroll");
-require("./bugFix");
+
 
 //TODO:
 
@@ -19,6 +20,8 @@ require("./bugFix");
 //[DONE] Mark active Section
 //[DONE] Add the portfolio to my work
 //[DONE] Detect IE and Cancel support completely
+//[DONE] Test on: Chrome 49, FirFox 52
+//[DONE] Create flexbox fallback
 
 //FIXME:
 

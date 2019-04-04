@@ -156,7 +156,8 @@ module.exports = env => {
             "clicked",
             "IEisUsed",
             "browser",
-            "browser-image"
+            "browser-image",
+            "oldChrome"
           ]
         }
       }),
