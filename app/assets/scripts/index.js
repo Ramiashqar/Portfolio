@@ -1,13 +1,13 @@
 // require("../styles/app.css");
 require("../styles/app.scss");
 require("../../index.html");
-require("./bugFix");
 require("../.htaccess");
 require("./navMark");
 require("./navigation");
 require("./styles");
 require("./dark");
 require("./smoothScroll");
+require("./bugFix");
 
 
 //TODO:
