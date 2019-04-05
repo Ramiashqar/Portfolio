@@ -17,7 +17,7 @@ if (localStorage.getItem("isDark") === "noDark" && localStorage.length >= 1) {
   bodyEl.classList.toggle("dark");
 }
 if (getChromeVersion() <= 49 && getChromeVersion()) {
-  const oldChromePartial=document.createElement('h2')
+  const oldChromePartial = document.createElement("h2");
   oldChromePartial.innerHTML = `
 You are using an old version of Chrome >>> V.${getChromeVersion()} <<< Please Update to a newer version to view a whole new version!!
 `;
