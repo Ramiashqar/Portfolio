@@ -6,11 +6,11 @@
       &--link {
         &--figure {
           &:hover &-image {
-               filter: blur(3px) brightness(200%);
-             }
+            filter: blur(3px) brightness(200%);
+          }
           &-caption {
-               color: $color-mindaro;
-               text-shadow: $color-gray 0 0 1rem;
+            color: $color-mindaro;
+            text-shadow: $color-gray 0 0 1rem;
           }
         }
       }
@@ -39,31 +39,31 @@
     }
   }
   .projects {
-    &__all {
-      &--box {
-        color: $color-mindaro;
-        box-shadow: none;
-        border: 1px solid $color-magenta;
-        &--view{
-          background-color: $color-darkJungleGreen;
-          color: $color-mindaro;
-          border: 0.3rem solid $color-darkJungleGreen;
-        }
+    &__element {
+      box-shadow: $color-white 0 0 0.2rem;
+      &:hover {
+        box-shadow: $color-mindaro 0rem 0rem 0.7rem;
+      }
+    }
+    &__view-more{
+      color: $color-mindaro;
+      &:hover{
+        color: $color-white;
       }
     }
   }
 
   .button-link {
-  &:hover {
-    background-color: $color-darkJungleGreen;
-    color: $color-magenta;
-    box-shadow: $color-gray 0 0 1rem;
-     letter-spacing: .1rem;
-     padding: .2rem .8rem;
-    font-weight: bold;
+    &:hover {
+      background-color: $color-darkJungleGreen;
+      color: $color-magenta;
+      box-shadow: $color-gray 0 0 1rem;
+      letter-spacing: 0.1rem;
+      padding: 0.2rem 0.8rem;
+      font-weight: bold;
+    }
   }
-}
-.active{
-  border-bottom: .4rem solid $color-mindaro;
-}
+  .active {
+    border-bottom: 0.4rem solid $color-mindaro;
+  }
 }

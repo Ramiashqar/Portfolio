@@ -1,83 +1,103 @@
 //MY WORK
 .projects {
-  margin: 4rem 0;
-  @include respond(tab-port) {
-    margin: 2rem 0;
-  }
+  &__element {
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+    backface-visibility: hidden;
+    box-shadow: $color-darkJungleGreen 0 0 0.2rem;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $color-black;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 10;
+    }
+    &:hover {
+      border: none !important;
+      box-shadow: $color-resolutionBlue 0rem 0rem 2rem;
+      transform: translateY(-4%) scale(1.01);
+      border: none;
+    }
+    &:hover::after {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+    &--img {
+      border-radius: 1rem;
 
-  &__all {
-    margin-left: 4rem;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-    @include respond(tab-port) {
-      margin-left: 0;
+      height: 100%;
+      transition: all 0.2s ease-out;
     }
-    &--box {
-      position: relative;
-      flex: 22% 0 0;
+    &:hover &--img {
+      transform: scale(1.4);
+    }
+    &--description {
+      position: absolute;
+      top: 35%;
+      opacity: 0;
+      text-align: center;
+      transform: scale(6);
+      color: $color-white;
+      backface-visibility: hidden;
+      font-size: 1.7rem;
       line-height: 1.5;
-      border: 1px solid $color-gray;
-      margin: 4rem 1rem 1rem 4rem;
-      box-shadow: $color-gray 1rem 1rem 0.5rem;
+      z-index: 20;
+      transition: all 0.2s ease-in;
+      cursor: pointer;
+      p {
+        font-size: 1.4rem;
+        margin-top: 5rem;
+        background-color: $color-black;
+        color: $color-gray-light;
+        text-shadow: none !important;
+        line-height: 2;
+        padding: 1.1rem 1rem;
+        text-transform: capitalize;
+      }
+    }
+    &:hover &--description {
+      opacity: 1;
       transform: scale(1);
-      transition: transform 0.3s ease-out;
-      @include respond(tab-port) {
-        margin: 4rem 1rem 1rem 1rem;
-      }
-      &--image {
-        height: 30rem;
-        width: 28rem;
-        @include respond(phone) {
-          height: 23rem;
-          width: 21rem;
-        }
-      }
-      &--description {
-        padding: 0.5rem;
-        &--paragraph {
-          margin-top: 1rem;
-          font-family: $sourceCode-medium, Courier, monospace;
-          font-size: 1.4rem;
-          width: 27rem;
-          margin-bottom: 1rem;
-          @include respond(phone) {
-            width: 20rem;
-            font-size: 1.2rem;
-          }
-        }
-      }
-      &--view {
-        @include absCenter;
-        background-color: $color-resolutionBlue;
-        height: 10rem;
-        width: 10rem;
-        font-size: 2rem;
-        border-radius: 50%;
-        color: $color-white;
-        border: 0.3rem solid $color-white;
-        visibility: hidden;
-        &-para {
-          padding: 3.5rem 2.6rem;
-          font-family: "Germania One", cursive;
-          letter-spacing: 0.3rem;
-          text-shadow: $color-gray 0 0 4rem;
-        }
-      }
+      text-shadow: $color-white 0 0 2rem;
+    }
+    &--trainer {
+      transition: all 0.2s ease;
       &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-      }
-      &:hover &--image {
-        filter: blur(3px) brightness(50%);
-      }
-      &:hover &--description {
-        filter: blur(3px) brightness(50%);
-      }
-      &:hover &--view {
-        visibility: visible;
+        color: $color-magenta;
+        box-shadow: $color-white 0 0 1rem;
       }
     }
   }
+  &__view-more {
+    font-size: 2rem;
+    color: $color-resolutionBlue;
+    text-decoration: underline;
+    transition: all 0.3s ease-out;
+    text-align: center;
+    &:hover {
+      letter-spacing: 0.3rem;
+      cursor: pointer;
+      color: $color-black;
+    }
+  }
+}
+#secondRow,
+#thirdRow {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+#secondRow.fadeIn,
+#thirdRow.fadeIn {
+  visibility: visible;
+  opacity: 1;
+  display: inherit;
 }
